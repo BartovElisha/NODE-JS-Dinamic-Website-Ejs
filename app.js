@@ -1,14 +1,18 @@
 const express = require('express');
 const app = express();
 
+// Set engine ejs
 app.set('view engine', 'ejs');
 
+// Server PORT Define
 const PORT = 3000;
 
+// Set Public path
 const path = require("path");
 const publicDirectoryPath = path.join(__dirname, "./public");
 app.use(express.static(publicDirectoryPath));
 
+// Set View engine path
 const viewsPath = path.join(__dirname,'./templates/views'); 
 app.set('views', viewsPath);
 
